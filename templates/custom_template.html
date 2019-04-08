@@ -1,0 +1,68 @@
+<div class="row">
+	<div class="col-xs-12">
+		<h1>{{viewInfoID.name}}</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 col-sm-4">
+		<img src="src/pokeball.png" alt="image"/>
+	</div>
+	<div class="col-xs-12 col-sm-8">
+		<div class="row">
+			<div class="col-xs-12">
+				<h2>Location:</h2>
+				<p>{{viewInfoID.location}}</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<h2>Dates:</h2>
+				<p>{{viewInfoID.dates}}</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<h2>Rules:</h2>
+			<ul>
+				<li data-ng-repeat="rule in viewInfoID.rules">{{rule}}</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<h2>Results:</h2>
+			<div style="overflow-x: auto">
+				<table class="table table-striped table-hover">
+					<thead>
+						<tr>
+							<th></th>
+							<th scope="col">Champion</th>
+							<th scope="col">Runner-Up</th>
+							<th scope="col">Semifinalist 1</th>
+							<th scope="col">Semifinalist 2</th>
+							<th scope="col">Semifinalist 3</th>
+							<th scope="col">Semifinalist 4</th>
+							<th scope="col">Semifinalist 5</th>
+							<th scope="col">Semifinalist 6</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>Masters</th>
+							<td data-ng-repeat="p in viewInfoID.masters track by $index">{{p}}</td>
+						</tr>
+						<tr>
+							<th>Seniors</th>
+							<td data-ng-repeat="p in viewInfoID.senior track by $index">{{p}}</td>
+						</tr>
+						<tr>
+							<th>Junior</th>
+							<td data-ng-repeat="p in viewInfoID.junior track by $index">{{p}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

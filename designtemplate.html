@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html lang="en" data-ng-app="myApp"> 
+	<head> 
+		<title>PokeChampVGC</title> 
+		<meta charset="utf-8" /> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+		<!-- Bootstrap --> 
+		<link href="css/bootstrap.min.css" rel="stylesheet" />  
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --> 
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// --> 
+		<!--[if lt IE 9]> <script src="js/html5shiv.js"></script> <script src="js/respond.min.js"></script> <![endif]-->
+		<link href= "css/designtemplate.css" rel="stylesheet"/>
+		<link rel="icon" href="src/pokeball.png">
+	</head>
+	<header>
+		<div class="container" id="titleContainer">
+			<div class="row">
+				<div class="col-xs-12">
+					<h1><a href="javascript:void(0)" onclick="openNav();">&#9776;</a> <img src="src/pokechampvgc.png" alt="PokeChampVGC" width="400px"/></h1>
+				</div>
+			</div>
+		</div>
+	</header>
+	<body data-ng-controller="myCtrl"> 
+		<div class="container">
+			<div id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<h3>Seasons</h3>
+				<h3>2017</h3>
+				<a href="#oceania2017" onclick="closeNav()">Oceania International</a>
+				<a href="#europe2017" onclick="closeNav()">European International</a>
+				<a href="#latinAmerican2017" onclick="closeNav()">Latin American International</a>
+				<a href="#northAmerican2017" onclick="closeNav()">North American International</a>
+				<a href="#world2017" onclick="closeNav()">World Championships</a>
+			</div>
+			
+			<div data-ng-view=""></div>
+			<p>{{error}}</p>
+		</div>
+		
+		<!-- Basic AngularJS --> 
+		<script src="js/angular.min.js"></script>
+		<script src="js/angular-route.min.js"></script>
+		<!-- jQuery - required for Bootstrap's JavaScript plugins) --> 
+		<script src="js/jquery.min.js"></script>
+		<!-- All Bootstrap  plug-ins  file -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- My Controller -->
+		<script src="js/designtemplate.js"></script>
+	</body> 
+</html>
